@@ -3,7 +3,7 @@
 # 💻 Rachit Srivastava
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d0b33349-765b-47e1-9809-58a25f12186a/deploy-status)](https://rachit-srivastava.netlify.app/)
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=06B6D4&center=true&vCenter=true&width=600&lines=Computer+Science+%40+ASU;Cybersecurity+%7C+Reverse+Engineering;Full-Stack+Next.js+Developer;Building+Secure%2C+Scalable+Systems" alt="Animated Typing text" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=06B6D4&center=true&vCenter=true&width=600&lines=Computer+Science+%40+ASU;Cybersecurity+%7C+Reverse+Engineering;Building+Secure%2C+Scalable+Systems" alt="Animated Typing text" />
 
 **[View Live Portfolio: rachit-srivastava.netlify.app](https://rachit-srivastava.netlify.app/)**
 
