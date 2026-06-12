@@ -78,10 +78,9 @@ export interface ISkillItem {
 }
 
 export interface ISocialLinkItem {
+  text: string;  // Add this line
+  icon: any;
   url: string;
-  icon: IconDefinition | string;
-  text: string;
-  name?: string;
 }
 
 export interface MenuItemProps {
