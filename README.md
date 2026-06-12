@@ -1,52 +1,76 @@
-# 💻 Rachit Srivastava | Portfolio
+<div align="center">
 
+# 💻 Rachit Srivastava
 [![Netlify Status](https://api.netlify.com/api/v1/badges/your-site-id/deploy-status)](https://rachit-srivastava.netlify.app/)
-![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![TypeScript](https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Cybersecurity](https://img.shields.io/badge/Cybersecurity-FF0000?style=for-the-badge&logo=hackthebox&logoColor=white)
 
-## 🌐 Live Access
-**[View My Portfolio: rachit-srivastava.netlify.app](https://rachit-srivastava.netlify.app/)**
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=06B6D4&center=true&vCenter=true&width=600&lines=Computer+Science+%40+ASU;Cybersecurity+%7C+Reverse+Engineering;Full-Stack+Next.js+Developer;Building+Secure%2C+Scalable+Systems" alt="Animated Typing text" />
+
+**[View Live Portfolio: rachit-srivastava.netlify.app](https://rachit-srivastava.netlify.app/)**
+
+</div>
 
 ---
 
-## 📖 About Me
-I am an undergraduate student at Arizona State University pursuing a Bachelor of Science in Computer Science with a concentration in Cybersecurity and a minor in Business. My technical focus lies in low-level systems architecture, reverse engineering, binary exploitation, and web security. 
+## 🚀 The Architecture: How I Built This
+This portfolio is not a standard template; it is a custom-engineered web application designed to demonstrate my understanding of modern frontend architecture, performance optimization, and CI/CD workflows.
 
-Beyond software development, I am deeply involved in the ASU community, serving as an Undergraduate Teaching Assistant for CSE 240 and a Community Assistant at Hassayampa Academic Village East.
+### 🛠 The Tech Stack
+<div align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify" />
+</div>
 
-## ⚙️ Technical Architecture (This Repository)
-This portfolio is engineered with a focus on modularity, performance, and scalability:
-* **Core Framework:** Next.js (React) for robust server-side rendering and SEO optimization.
-* **Design System:** Tailwind CSS for a fully responsive, utility-first UI.
-* **Interaction Layer:** Framer Motion for sophisticated, scroll-triggered animations.
-* **Data Handling:** Decoupled data architecture using strict TypeScript interfaces for scalable content management.
-* **Deployment:** CI/CD pipeline integrated with Netlify for automated builds on every commit.
+### 🧠 Engineering Decisions
+1. **Server-Side Rendering (SSR) via Next.js:** Chosen to ensure fast load times and optimal SEO, proving I understand how to build for the modern web beyond basic single-page applications (SPAs).
+2. **Decoupled Data Architecture:** Instead of hardcoding UI elements, I built strict **TypeScript interfaces** (e.g., `ISocialLinkItem`, `IProjectItem`) and decoupled the data into scalable configuration files. This allows me to update my portfolio instantly without rewriting React components.
+3. **Scroll-Triggered Motion Design:** Integrated **Framer Motion** to engineer complex, terminal-style typing effects and entrance animations that trigger dynamically via `whileInView` observers, creating a highly engaging user experience.
+4. **Public API Asset Pipeline:** Bypassed heavy local image hosting by dynamically fetching high-fidelity vector icons from public APIs (Iconify/Devicon). This keeps the repository lightweight while maintaining a premium aesthetic.
+5. **Automated CI/CD:** Migrated and configured a continuous deployment pipeline using **Netlify**. Every code push to the `main` branch automatically resolves dependencies, handles build-time linting, and deploys to production.
 
-## 🛠 Skills & Proficiencies
-* **Languages:** C, C++, Java, Python, x86 & MIPS Assembly, Scheme, Prolog, MATLAB, Verilog
-* **Security & Systems:** Reverse Engineering, Binary Exploitation, SQL Injection, XSS, Cryptographic Protocols
-* **Web Development:** Next.js, React, TypeScript, Tailwind CSS
-* **Core Concepts:** Data Structures & Algorithms, Digital Logic, Market Structures, Statistical Analysis
+---
 
-## 🚀 Featured Academic & Technical Projects
+## 🛡️ About Me & Expertise
+I am an undergraduate at Arizona State University pursuing a **B.S. in Computer Science with a concentration in Cybersecurity**. My core interest lies in the intersection of low-level systems and security. 
 
-### 1. 4-Bit Microprocessor Architecture
-* **Tech:** Verilog, Hardware Description
-* **Details:** Designed and simulated a fully functional 4-bit microprocessor architecture alongside a synchronous traffic light system, demonstrating a deep understanding of digital logic and computer organization.
+When I am not serving as an Undergraduate Teaching Assistant for CSE 240 or coordinating residential life as a Community Assistant, I am diving into:
+* **Offensive Security:** Reverse Engineering, Binary Exploitation, Web Security (SQLi, XSS).
+* **Systems Level Programming:** C, C++, x86 & MIPS Assembly.
+* **Hardware/Software Integration:** Digital Logic, Verilog, and Microprocessor Architecture.
 
-### 2. Autonomous Navigation Robot
-* **Tech:** LEGO MINDSTORMS, MATLAB
-* **Details:** Engineered an autonomous robot utilizing a custom PID controller for precise navigation, bridging hardware execution with complex software control loops.
+---
 
-## 📂 Repository Structure
-```text
-my-portfolio/
-├── src/
-│   ├── components/    # Reusable UI components (SocialButton, ProjectItem, etc.)
-│   ├── data/          # Decoupled data objects (projects, skills, socialLinks)
-│   ├── types/         # TypeScript interface definitions
-│   └── styles/        # Global Tailwind configurations
-├── next.config.js     # Next.js optimization & remote patterns
-└── package.json       # Project dependencies
+## ⚡ Featured Engineering Projects
+
+### 🔬 4-Bit Microprocessor Architecture
+* **Stack:** Verilog, Hardware Description Logic
+* **Details:** Designed, simulated, and documented a fully functional 4-bit microprocessor architecture from the ground up, alongside a synchronous traffic light system. This project required strict adherence to digital logic fundamentals and state machine optimization.
+
+### 🤖 Autonomous Navigation Robot (PID Controller)
+* **Stack:** MATLAB, LEGO MINDSTORMS
+* **Details:** Engineered an autonomous robotic system utilizing a custom Proportional-Integral-Derivative (PID) controller. Bridged hardware execution with complex software control loops to achieve precise, real-time spatial navigation.
+
+---
+
+## 📊 GitHub Analytics
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=srivastavaarachit&show_icons=true&theme=radical&hide_border=true" alt="Rachit's GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=srivastavaarachit&layout=compact&theme=radical&hide_border=true" alt="Top Languages" />
+</div>
+
+---
+
+## 📂 Run This Code Locally
+To inspect the codebase or run the Next.js development server:
+
+```bash
+# 1. Clone the repository
+git clone [https://github.com/srivastavaarachit/my-portfolio.git](https://github.com/srivastavaarachit/my-portfolio.git)
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
+npm run dev
