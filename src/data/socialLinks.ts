@@ -14,7 +14,7 @@ const socialLinks = [
   {
     name: "LinkedIn",
     text: "LinkedIn", // Added text property
-    url: "https://www.linkedin.com/in/srivastavaarachit/",
+    url: "https://www.linkedin.com/in/rachitsrivastavaa/",
     icon: faLinkedin,
   },
   {
