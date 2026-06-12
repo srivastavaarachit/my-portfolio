@@ -16,17 +16,20 @@ const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
     >
       <ConstrainedBox classNames="px-4 py-8 pt-16 z-20 items-center justify-center">
         <Column classNames="w-full items-center justify-center">
-          <div className="inline-flex items-center">
-            <p className="text-2xl/normal sm:text-3xl/normal md:text-5xl/normal lg:text-6xl/normal xl:text-7xl/normal dark:text-[var(--textColor)] text-[var(--textColor)] font-bold text-center">
+          
+          {/* FIXED ALIGNMENT WRAPPER */}
+          <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center gap-2 lg:gap-4 w-full">
+            <p className="text-3xl/normal sm:text-4xl/normal md:text-5xl/normal lg:text-6xl/normal xl:text-7xl/normal dark:text-[var(--textColor)] text-[var(--textColor)] font-bold text-center whitespace-nowrap">
               Hi there, I am
             </p>
             <FlipWords
-              words={["Nikhil Rajput.", "@nixrajput."]}
-              className="text-2xl/normal sm:text-3xl/normal md:text-5xl/normal lg:text-6xl/normal xl:text-7xl/normal dark:text-[var(--primaryColor)] text-[var(--primaryColor)] font-bold text-center"
+              words={["Rachit Srivastava.", "@srivastavaarachit."]}
+              className="text-3xl/normal sm:text-4xl/normal md:text-5xl/normal lg:text-6xl/normal xl:text-7xl/normal dark:text-[var(--primaryColor)] text-[var(--primaryColor)] font-bold text-center whitespace-nowrap"
             />
           </div>
-          <p className="text-sm/normal md:text-base/normal dark:text-[var(--textColorLight)] text-[var(--textColorLight)]">
-            Full Stack Developer 💻 SDE 🛠️ Open Source 🌍
+          
+          <p className="text-sm/normal md:text-base/normal dark:text-[var(--textColorLight)] text-[var(--textColorLight)] mt-4 text-center">
+            Junior @ Arizona State University 🧑🏻‍🎓 Cybersecurity 🛡️ Reverse Engineering ⚙️ Computer Architecture 🔬
           </p>
 
           <div className="gap-4 mt-12 lg:mt-16 flex flex-col md:flex-row">
@@ -39,12 +42,34 @@ const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
 
           <Row classNames="mt-2 gap-2">
             {socialLinks.slice(0, 5).map((link, index) => {
+              const isEmail = link.name === "Email";
+              const commonClassName = "app__outlined_btn !rounded-full !p-2 lg:!p-3 !aspect-square !border-[var(--textColor)]";
+
+              // If it's an email, use an <a> tag
+              if (isEmail) {
+                return (
+                  <a
+                    key={`social-link-${index}`}
+                    href={link.url}
+                    className={commonClassName}
+                    aria-label={`${link.name}`}
+                  >
+                    <span className="text-base/6 text-[var(--whiteColor)]">
+                      {typeof link.icon === "string" ? null : (
+                        <FontAwesomeIcon icon={link.icon} />
+                      )}
+                    </span>
+                  </a>
+                );
+              }
+
+              // Otherwise, use the Next.js Link component
               return (
                 <Link
                   key={`social-link-${index}`}
                   href={link.url}
                   target="_blank"
-                  className="app__outlined_btn !rounded-full !p-2 lg:!p-3 !aspect-square !border-[var(--textColor)]"
+                  className={commonClassName}
                   aria-label={`${link.name}`}
                 >
                   <span className="text-base/6 text-[var(--whiteColor)]">

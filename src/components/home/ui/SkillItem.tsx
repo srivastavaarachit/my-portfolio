@@ -1,5 +1,4 @@
 import type { ISkillListItem } from "@/types";
-import Image from "next/image";
 import CardBox from "@/components/core/CardBox";
 import Row from "@/components/core/Row";
 import Column from "@/components/core/Column";
@@ -18,20 +17,18 @@ const SkillItem = ({ data }: { data: ISkillListItem }) => {
                 classNames="items-center gap-1 text-[var(--textColor)]"
               >
                 {skill.icon ? (
-                  <Image
+                  /* Replaced Next.js <Image> with native HTML <img> */
+                  <img
                     src={skill.icon}
-                    alt={`logo-${skill.title}`}
-                    width={144}
-                    height={144}
-                    sizes="100%"
+                    alt={`${skill.title} logo`}
+                    width={56}
+                    height={56}
                     loading="lazy"
-                    placeholder="blur"
-                    blurDataURL="/images/logical-thinking.png"
-                    className="w-12 lg:w-14 h-auto aspect-square object-cover"
+                    className="w-12 lg:w-14 h-auto aspect-square object-contain drop-shadow-md"
                   />
                 ) : null}
 
-                <p className="text-xs/6 font-normal">{skill.title}</p>
+                <p className="text-xs/6 font-normal text-center mt-2">{skill.title}</p>
               </Column>
             );
           })}

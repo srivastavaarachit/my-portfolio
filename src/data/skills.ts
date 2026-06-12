@@ -5,174 +5,134 @@ const skills: ISkillListItem[] = [
     title: "Programming Languages",
     items: [
       {
-        title: "JavaScript",
+        title: "C",
         level: SkillLevel.Expert,
-        icon: "/skills/javascript.svg",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
       },
       {
-        title: "TypeScript",
+        title: "C++",
+        level: SkillLevel.Expert,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+      },
+      {
+        title: "Java",
+        level: SkillLevel.Expert,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+      },
+      {
+        title: "Python",
+        level: SkillLevel.Expert,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      },
+      {
+        title: "x86/MIPS Assembly",
         level: SkillLevel.Intermediate,
-        icon: "/skills/typescript.svg",
+        icon: "https://api.iconify.design/material-symbols/memory-alt-outline.svg?color=white&width=120&height=120",
       },
       {
-        title: "Dart",
-        level: SkillLevel.Expert,
-        icon: "/skills/dart.svg",
+        title: "Prolog",
+        level: SkillLevel.Intermediate,
+        icon: "https://api.iconify.design/carbon/branch.svg?color=white&width=120&height=120", // FIXED: Logic branching icon
+      },
+      {
+        title: "Scheme",
+        level: SkillLevel.Intermediate,
+        icon: "https://api.iconify.design/file-icons/scheme.svg?color=white&width=120&height=120",
+      },
+      {
+        title: "MATLAB",
+        level: SkillLevel.Intermediate,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg",
       },
     ],
   },
   {
-    title: "Frontend Development",
+    title: "Technical Domains",
     items: [
       {
-        title: "Next.js",
+        title: "Digital Circuit Design",
         level: SkillLevel.Expert,
-        icon: "/skills/nextjs.png",
+        icon: "https://api.iconify.design/ph/cpu-light.svg?color=white&width=120&height=120",
       },
       {
-        title: "React.js",
+        title: "Boolean Logic",
         level: SkillLevel.Expert,
-        icon: "/skills/react.svg",
+        icon: "https://api.iconify.design/tabler/logic-and.svg?color=white&width=120&height=120",
       },
       {
-        title: "HTML",
+        title: "FSM",
         level: SkillLevel.Expert,
-        icon: "/skills/html.svg",
+        icon: "https://api.iconify.design/carbon/machine-learning-model.svg?color=white&width=120&height=120",
       },
       {
-        title: "CSS",
+        title: "PID Control",
         level: SkillLevel.Intermediate,
-        icon: "/skills/css.svg",
+        icon: "https://api.iconify.design/carbon/chart-stepper.svg?color=white&width=120&height=120",
       },
       {
-        title: "SASS",
+        title: "Embedded Systems",
         level: SkillLevel.Intermediate,
-        icon: "/skills/sass.svg",
+        icon: "https://api.iconify.design/material-symbols/developer-board-outline.svg?color=white&width=120&height=120", // FIXED: Hardware dev board icon
       },
       {
-        title: "Redux Toolkit",
+        title: "Algorithm Design",
         level: SkillLevel.Expert,
-        icon: "/skills/redux.svg",
+        icon: "https://api.iconify.design/carbon/flow-data.svg?color=white&width=120&height=120",
       },
     ],
   },
   {
-    title: "Backend Development",
+    title: "Tools & Software",
     items: [
       {
-        title: "Node.js",
+        title: "Logisim",
         level: SkillLevel.Expert,
-        icon: "/skills/nodejs.svg",
+        icon: "https://api.iconify.design/ph/circuitry.svg?color=white&width=120&height=120",
       },
       {
-        title: "Express.js",
+        title: "Digital Simulation",
         level: SkillLevel.Expert,
-        icon: "/skills/express.svg",
-      },
-      {
-        title: "Socket.io",
-        level: SkillLevel.Intermediate,
-        icon: "/skills/socket-io.png",
-      },
-      // {
-      //   title: "Nest.js",
-      //   level: SkillLevel.Beginner,
-      //   icon: "/skills/nestjs.svg",
-      // },
-    ],
-  },
-  {
-    title: "Mobile App Development",
-    items: [
-      {
-        title: "Flutter",
-        level: SkillLevel.Expert,
-        icon: "/skills/flutter.svg",
-      },
-      {
-        title: "GetX",
-        level: SkillLevel.Expert,
-        icon: "/skills/getx.png",
-      },
-    ],
-  },
-  {
-    title: "Database Management",
-    items: [
-      {
-        title: "MongoDB",
-        level: SkillLevel.Intermediate,
-        icon: "/skills/mongodb.svg",
-      },
-      {
-        title: "PostgreSQL",
-        level: SkillLevel.Intermediate,
-        icon: "/skills/postgresql.svg",
-      },
-      {
-        title: "MySQL",
-        level: SkillLevel.Beginner,
-        icon: "/skills/mysql.svg",
-      },
-    ],
-  },
-  {
-    title: "DevOps/VCS",
-    items: [
-      {
-        title: "Docker",
-        level: SkillLevel.Beginner,
-        icon: "/skills/docker.png",
-      },
-      {
-        title: "AWS",
-        level: SkillLevel.Intermediate,
-        icon: "/skills/aws.svg",
+        icon: "https://api.iconify.design/carbon/virtual-machine.svg?color=white&width=120&height=120", // FIXED: Simulation/Virtualization icon
       },
       {
         title: "Git",
         level: SkillLevel.Expert,
-        icon: "/skills/git.svg",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
       },
       {
         title: "GitHub",
         level: SkillLevel.Expert,
-        icon: "/skills/github.svg",
+        icon: "https://api.iconify.design/mdi/github.svg?color=white&width=120&height=120",
+      },
+      {
+        title: "MS Office Suite",
+        level: SkillLevel.Expert,
+        icon: "https://api.iconify.design/mdi/microsoft-office.svg?color=white&width=120&height=120", // FIXED: Official MS Office icon
       },
     ],
   },
   {
-    title: "Miscellaneous",
+    title: "Soft Skills",
     items: [
       {
-        title: "Firebase",
-        level: SkillLevel.Intermediate,
-        icon: "/skills/firebase.svg",
-      },
-      {
-        title: "Ubuntu",
-        level: SkillLevel.Intermediate,
-        icon: "/skills/ubuntu.png",
-      },
-    ],
-  },
-  {
-    title: "Nontechnical Skills",
-    items: [
-      {
-        title: "Problem Solving",
+        title: "Critical Thinking",
         level: SkillLevel.Expert,
-        icon: "/images/logical-thinking.png",
+        icon: "https://api.iconify.design/carbon/idea.svg?color=white&width=120&height=120",
       },
       {
-        title: "Collaboration",
+        title: "Professional Communication",
         level: SkillLevel.Expert,
-        icon: "/images/collaboration.png",
+        icon: "https://api.iconify.design/carbon/communication-unified.svg?color=white&width=120&height=120",
       },
       {
-        title: "Analytical Skills",
+        title: "Attention to Detail",
         level: SkillLevel.Expert,
-        icon: "/images/analytical-skills.png",
+        icon: "https://api.iconify.design/carbon/search-advanced.svg?color=white&width=120&height=120",
+      },
+      {
+        title: "Student-Focused Mindset",
+        level: SkillLevel.Expert,
+        icon: "https://api.iconify.design/carbon/collaborate.svg?color=white&width=120&height=120",
       },
     ],
   },

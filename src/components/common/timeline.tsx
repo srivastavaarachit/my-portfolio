@@ -8,6 +8,55 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
+// NEW: We isolate each row so it can track its own scroll intersection
+const TimelineRow = ({ item }: { item: TimelineEntry }) => {
+  const rowRef = useRef<HTMLDivElement>(null);
+  
+  // Tracks when this specific row reaches the top 20% to 10% of the viewport.
+  // This perfectly syncs the ignition timing with the descending global line.
+  const { scrollYProgress } = useScroll({
+    target: rowRef,
+    offset: ["start 20%", "start 10%"],
+  });
+
+  // Physics mapping: Fades from Tailwind neutral grays to your neon green
+  const circleColor = useTransform(scrollYProgress, [0, 1], ["#404040", "#00ff88"]);
+  const borderColor = useTransform(scrollYProgress, [0, 1], ["#525252", "#00ff88"]);
+  const glow = useTransform(scrollYProgress, [0, 1], ["0px 0px 0px rgba(0, 255, 136, 0)", "0px 0px 15px rgba(0, 255, 136, 0.8)"]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.4]);
+
+  return (
+    <div ref={rowRef} className="flex justify-start pt-20 pb-10">
+      <div className="sticky flex flex-col md:flex-row z-40 items-center top-20 lg:top-20 self-start max-w-xs lg:max-w-sm md:w-full">
+        <div className="h-6 w-6 lg:h-8 lg:w-8 absolute left-5 lg:left-4 rounded-full bg-zinc-800 dark:bg-zinc-800 flex items-center justify-center">
+          
+          {/* Replaced static div with an animated motion sphere */}
+          <motion.div
+            style={{
+              backgroundColor: circleColor,
+              borderColor: borderColor,
+              boxShadow: glow,
+              scale: scale,
+            }}
+            className="h-3 w-3 lg:h-4 lg:w-4 rounded-full border border-neutral-600 dark:border-neutral-700"
+          />
+          
+        </div>
+        <h3 className="hidden md:block text-lg lg:text-xl xl:text-2xl font-semibold text-[var(--textColor)] dark:text-[var(--textColor)] md:pl-20 tracking-wide">
+          {item.title}
+        </h3>
+      </div>
+
+      <div className="relative pl-16 pr-4 md:pl-4 w-full">
+        <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
+          {item.title}
+        </h3>
+        {item.content}
+      </div>
+    </div>
+  );
+};
+
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -31,26 +80,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   return (
     <div className="w-full mt-8 mb-8" ref={containerRef}>
       <div ref={ref} className="relative max-w-7xl mx-auto">
+        
+        {/* Render the new interactive sub-components */}
         {data.map((item, index) => (
-          <div key={index} className="flex justify-start pt-20 pb-10">
-            <div className="sticky flex flex-col md:flex-row z-40 items-center top-20 lg:top-20 self-start max-w-xs lg:max-w-sm md:w-full">
-              <div className="h-6 w-6 lg:h-8 lg:w-8 absolute left-5 lg:left-4 rounded-full bg-zinc-800 dark:bg-zinc-800 flex items-center justify-center">
-                <div className="h-3 w-3 lg:h-4 lg:w-4 p-1 lg:p-2 rounded-full bg-neutral-700 dark:bg-neutral-700 border border-neutral-600 dark:border-neutral-700" />
-              </div>
-              <h3 className="hidden md:block text-lg lg:text-xl xl:text-2xl font-semibold text-[var(--textColor)] dark:text-[var(--textColor)] md:pl-20 tracking-wide">
-                {item.title}
-              </h3>
-            </div>
-
-            <div className="relative pl-16 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
-                {item.title}
-              </h3>
-              {item.content}
-            </div>
-          </div>
+          <TimelineRow key={`timeline-item-${index}`} item={item} />
         ))}
 
+        {/* The descending global line */}
         <div
           style={{ height: height - 20 + "px" }}
           className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "

@@ -3,52 +3,44 @@ import {
   faHome,
   faUser,
   faBriefcase,
-  faTimeline,
-  faAward,
-  faLaptopCode,
+  faGraduationCap,
+  faProjectDiagram,
   faEnvelope,
-  faCreditCard,
 } from "@fortawesome/free-solid-svg-icons";
 
+// Added the "export" keyword directly to the constant (Named Export)
 export const navMenus: INavItem[] = [
-  // {
-  //   name: "Home",
-  //   link: "/#hero",
-  //   icon: faHome,
-  // },
   {
     name: "About",
     link: "/#about",
-    icon: faUser,
+    icon: faHome,
   },
   {
-    name: "Services",
-    link: "/#services",
-    icon: faBriefcase,
+    name: "Education",
+    link: "/#services", 
+    icon: faGraduationCap,
   },
   {
     name: "Experiences",
     link: "/#experiences",
-    icon: faTimeline,
+    icon: faBriefcase,
   },
   {
     name: "Skills",
     link: "/#skills",
-    icon: faAward,
+    icon: faUser, 
   },
   {
     name: "Projects",
     link: "/#projects",
-    icon: faLaptopCode,
+    icon: faProjectDiagram,
   },
   {
     name: "Contact",
     link: "/#contact",
     icon: faEnvelope,
   },
-  {
-    name: "Payment",
-    link: "/payment",
-    icon: faCreditCard,
-  },
 ];
+
+// Kept the default export as a fallback (Default Export)
+export default navMenus;

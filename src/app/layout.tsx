@@ -25,9 +25,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Nikhil Rajput",
+  title: "Rachit Srivastava",
   description:
-    "Nikhil Rajput is a proficient Software Engineer and Full Stack Developer from India, skilled in front-end and back-end development using modern tech stacks.",
+    "Rachit Srivastava is a proficient Software Engineer and Full Stack Developer from India, skilled in front-end and back-end development using modern tech stacks.",
   robots: {
     index: true,
     follow: true,
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     },
   ],
   keywords: [
-    "nikhil rajput",
+    "Rachit Srivastava",
     "nikhil",
     "nixrajput",
     "nikhil-rajput",

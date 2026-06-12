@@ -5,7 +5,6 @@ import { Balancer } from "react-wrap-balancer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
 import Link from "next/link";
 import Column from "@/components/core/Column";
 import Row from "@/components/core/Row";
@@ -15,21 +14,20 @@ const ProjectItem = ({ project }: { project: IProjectItem }) => {
   return (
     <CardBox classNames="min-w-[calc(100%-2rem)] sm:min-w-[25rem] md:min-w-[28rem] aspect-[3/5] max-h-[30rem] p-4 gap-8 items-center justify-between rounded-[var(--borderRadius)] border border-[rgba(255,255,255,0.10)] dark:bg-[var(--primaryColor5)] bg-[var(--primaryColor5)] shadow-[2px_4px_16px_0px_rgba(100,100,100,0.06)_inset] group slide_in">
       <Column classNames="w-full items-center justify-start">
-        <Row classNames="w-[2.5rem] md:w-[3rem] aspect-square items-center justify-center">
-          <Image
+        
+        {/* Replaced Next.js Image with Native HTML img to bypass SVG blocking */}
+        <Row classNames="w-[3rem] md:w-[4rem] aspect-square items-center justify-center">
+          <img
             src={project.icon}
             alt={`project-${project.title}`}
-            width={100}
-            height={100}
-            sizes="100%"
+            width={64}
+            height={64}
             loading="lazy"
-            placeholder="blur"
-            blurDataURL={project.icon}
-            className="w-full h-full object-cover aspect-square"
+            className="w-full h-full object-contain aspect-square drop-shadow-md"
           />
         </Row>
 
-        <p className="text-lg/6 font-semibold mt-4">{project.title}</p>
+        <p className="text-lg/6 font-semibold mt-4 text-center">{project.title}</p>
 
         <div
           className={`flex flex-row items-center justify-center rounded-full py-[0.05] px-[0.5rem] mt-4 capitalize text-center border ${
@@ -75,7 +73,7 @@ const ProjectItem = ({ project }: { project: IProjectItem }) => {
       </Column>
 
       <Column classNames="w-full items-center">
-        <p className="text-center text-base/6">
+        <p className="text-center text-sm md:text-base/6">
           <Balancer>{project.description}</Balancer>
         </p>
 
